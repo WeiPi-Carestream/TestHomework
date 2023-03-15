@@ -1,9 +1,10 @@
 import pandas as pd
+<<<<<<< HEAD
 import matplotlib.pyplot as plt
 import os
 import glob
 import math
-user_key = 7441
+user_key= 29374
 
 def plot_all_csv_pressure():
     path = os.getcwd()
@@ -12,4 +13,13 @@ def plot_all_csv_pressure():
     for f in csv_files:
         storm = pd.read_csv(f)
         storm['Pressure'].plot()
+        plt.show()      
+		
+def plot_all_csv_intensity():
+    path = os.getcwd()
+    csv_files = glob.glob(os.path.join(path, '*.csv'))
+    
+    for f in csv_files:
+        storm = pd.read_csv(f)
+        storm['Intensity'].plot()
         plt.show()
